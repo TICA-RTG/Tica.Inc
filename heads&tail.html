@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>head</title>
+</head>
+<body>
+  <button onclick="
+    playGame('Head');
+    ">Head</button>
+
+  <button onclick="
+    playGame('Tail');
+  ">Tail</button>
+
+  <button onclick="
+    alert(`SCOREBOARD
+Wins : ${scores.Wins}, Losses : ${scores.Losses}`)
+  ">scores</button>
+
+  <button onclick="
+    scores.Wins =0;
+    scores.Losses = 0;
+    localStorage.removeItem(score);
+  ">Reset score</button>
+</body>
+
+  <script>
+    let scores = JSON.parse(localStorage.getItem('score')) || {
+      Wins : 0,
+      Losses : 0
+    };
+
+   
+
+    function computerMove(){
+      let computerSelect = '';
+      const randomNumber = Math.random();
+
+      if (randomNumber >= 0 && randomNumber < 0.5){
+      computerSelect = 'Head';
+     // console.log('jdfidfh');
+      }
+     
+      else if (randomNumber >= 0.5 && randomNumber < 1){
+      computerSelect = 'Tail';
+     // console.log('aaaaaa');
+      }
+      console.log(computerSelect);
+      return computerSelect;
+    }
+
+    function playGame(yourChoice){
+      let result = '';
+      const computerSelect = computerMove();
+
+      if (yourChoice === 'Head' && computerSelect === 'Head'){
+        result = 'You win';
+      }
+      else if (yourChoice === 'Head' && computerSelect ==='Tail'){
+        result ='You lose';
+      }
+
+      else if (yourChoice === 'Tail' && computerSelect === 'Tail'){
+        result = 'You win';
+      }
+
+      else if (yourChoice === 'Tail' && computerSelect === 'Head'){
+        result = 'You lose'
+      }
+
+      if (result === 'You win'){
+        scores.Wins ++ ;
+      }
+
+      else if (result === 'You lose'){
+        scores.Losses ++ ;
+      }
+
+      localStorage.setItem('score', JSON.stringify(scores));
+      alert(`you chose ${yourChoice}, and the outcome is ${computerSelect}, ${result}
+the score is Wins : ${scores.Wins}, Losses: ${scores.Losses}`);
+    }
+  </script>
+
+</html>

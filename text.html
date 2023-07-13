@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    "<div id="myBar" style="width: 100%;"></div>
+
+<script>
+    var barChartData = {
+        labels: [""January"", ""February"", ""March"", ""April"", ""May"", ""June"", ""July""],
+        datasets: [
+            {
+                label: ""My First dataset"",
+                fill: false,
+                data: [65, 59, 73, 97, 36, 28, 48]
+            },
+            {
+                label: ""My Second dataset"",
+                fill: true,
+                data: [28, 48, 73, 96, 34, 49, 39]
+            }
+        ]
+    };
+    Highcharts.chart('myBar', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Browser market share 2017'
+        },
+        xAxis: {
+            categories: [
+                'Chrome',
+                'Firefox',
+                'IE',
+                'Safari',
+                'Opera',
+                'Edge'
+            ]
+        },
+        yAxis: {
+            title: {
+                text"
+</body>
+</html>

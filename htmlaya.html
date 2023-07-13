@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // JavaScript for timer
+    function startTimer(duration, display) {
+      var timer = duration, minutes, seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          // Timer has reached zero
+          clearInterval(timer);
+          alert("Timer has ended!");
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      var duration = 5 * 60; // Set the duration in seconds (e.g., 5 minutes)
+      var display = document.getElementById("timer");
+      startTimer(duration, display);
+    };
+  </script>
+</head>
+<body>
+  <!-- Timer display -->
+  <div id="timer">05:00</div>
+</body>
+</html>
