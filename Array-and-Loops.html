@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+</head>
+<body>
+  
+
+  <script>
+  /*  const myArray = [4,5,2,3,7,0,1];
+
+    myArray.push(100);
+
+    //takes 2 values, one gets the index, the 2nd gets to where to start displaying or where to stop deleting.
+    myArray.splice(0,2);
+
+    console.log(myArray);
+
+    let i = 1;
+    while (i < 7) {
+      console.log(i);
+      i++;
+    }
+
+    for (let x = 1; x < 10; x++) {
+      console.log(x);
+    }
+*/
+/*
+    const todoList = ['make dinner', 'wash dishes', 'watch youtube'];
+
+    for (let index = 0; index <= todoList.length - 1; index++) {
+
+      const value = todoList[index];
+      console.log(value);
+    }
+    
+  */
+
+  const nums = [1,2,2];
+  let total = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    total = total + num;
+  }
+
+  console.log(total);
+
+  const numsDouble = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    numsDouble.push(num * 3);
+  }
+
+  console.log(numsDouble);
+  </script>
+</body>
+</html>

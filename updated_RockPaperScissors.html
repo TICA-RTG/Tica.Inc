@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RockPaperScissors</title>
+  <link rel="script" href="rockpaper.js">
 </head>
 <body>
   
@@ -27,7 +28,7 @@
    xoxo();
    ">Score</button>
  
-   <button onclick="
+   <button class="reset" onclick="
    score.Wins = 0;
    score.Losses = 0;
    score.Ties = 0;
@@ -36,9 +37,7 @@
    updateScore();
    ">Reset score</button>
  
-   <button onclick="
-   selector('kaakaimotobi');
-   ">your pick</button>
+  
 
     <p class="js-moves"></p>
     <p class="js-verdict"></p>
@@ -133,11 +132,11 @@
      }
  
      if (result === 'You win'){
-       score.Wins += 1;
+       score.Wins ++;
      }
  
      else if (result === 'You lose'){
-       score.Losses += 1;
+       score.Losses ++;
      }
  
      else if (result === 'Tie'){
@@ -175,13 +174,8 @@ function updateScore(){
  function xoxo(){
    alert(`Wins : ${score.Wins}, Losses : ${score.Losses}, Ties : ${score.Ties}`)
  console.log(score);
- }  
- 
- 
- /*function selector(choose){
-   alert(`you selected ${computerMove}`);
- }*/
- 
+ } 
+
    </script>
 
 </body>

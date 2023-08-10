@@ -1,4 +1,35 @@
 .header {
   text-align: center;
-  
+}
+
+p{
+  font-family: sans-serif;
+  margin-top: 0px;
+}
+
+.video-title {
+font-size: 18px;
+font-weight: bold;
+width: 250px;
+line-height: 25px;
+margin-bottom: 5px;
+}
+
+.video-stats {
+font-size: 14px;
+color: gray;
+margin-bottom: 20px;
+}
+
+.video-owner {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.video-description{
+  font-size: 15px;
+  color: gray;
+  width: 250px;
+  line-height: 22px;
 }
