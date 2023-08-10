@@ -53,13 +53,13 @@ for (let i = 0; i < todo.length; i++){
    const { price,quantity,size } = item;*/
   const { date } = taskObject;
   const html = `
-  <p>${name} ${date}
-    <button onclick = "todo.splice(${i},1);
-      renderTodo();
-      console.log(todo);">
+  <div class="to-do-name">${name}</div>
+  <div class="to-do-date">${date}</div>
+  <button class="delete-button" onclick = "todo.splice(${i},1);
+      renderTodo();">
       Delete
-    </button>
-    </p>`;
+  </button>
+  `;
   todoList += html;
   const chores = document.querySelector('.js-to-do');
   chores.innerHTML = todoList;
